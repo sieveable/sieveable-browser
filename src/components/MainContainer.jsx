@@ -58,12 +58,14 @@ export default class MainContainer extends React.Component {
         <SlideOutMenu/>
         <main className="panel" id="main">
           <QueryEditor submit={this.handleSubmitQuery}/>
+          <ResultList
+            expand={this.handleExpandResult}
+            getExecutedQuery={this.getExecutedQuery}
+            result={this.state.result}/>
+          <div>
+            {this.content()}
+          </div>
         </main>
-        <ResultList expand={this.handleExpandResult}
-          getExecutedQuery={this.getExecutedQuery} result={this.state.result}/>
-        <div>
-          {this.content()}
-        </div>
       </div>
     );
   }
