@@ -31,10 +31,11 @@ export default class ResultList extends React.Component {
         return (
           <div className="panel panel-danger">
             <div className="panel-heading">
+              {this.renderHeadingToolbar()}
               <p>{this.props.getExecutedQuery()}</p>
             </div>
             <div className="panel-body">
-              <p>No results found</p>
+              <p>No results found.</p>
             </div>
           </div>
         );
@@ -42,7 +43,8 @@ export default class ResultList extends React.Component {
         return (
           <div className="panel panel-success">
             <div className="panel-heading">
-              <p>{this.props.getExecutedQuery()}</p>
+              {this.props.getExecutedQuery()}
+              {this.renderHeadingToolbar()}
             </div>
             <div className="panel-body">
               <table className="table">
@@ -60,5 +62,24 @@ export default class ResultList extends React.Component {
         );
       }
     }
+  }
+
+  renderHeadingToolbar(){
+    console.log("in renderHeadingToolbar");
+    return (
+      <div className="well-lg">
+      <div className="btn-toolbar pull-right" role="toolbar" aria-label="exportptions">
+        <div className="btn-group" role="group" aria-label="Save">
+          <button type="button" className="btn btn-default">Save</button>
+        </div>
+        <div className="btn-group" role="group" aria-label="Export results">
+          <button type="button" className="btn btn-default">Export</button>
+        </div>
+        <div className="btn-group" role="group" aria-label="Re-run">
+          <button type="button" className="btn btn-default">Re-run</button>
+        </div>
+      </div>
+    </div>
+    );
   }
 }
