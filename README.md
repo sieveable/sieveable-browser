@@ -2,7 +2,7 @@
 A web based client for Sieveable.
 
 ## Requirement
-This client requires [_Sieveable_ web server]('https://github.com/sikuli/sieveable/').
+This client requires running the [_Sieveable_ web server](https://github.com/sikuli/sieveable/ "Sieveable web server").
 
 ## Usage
 
