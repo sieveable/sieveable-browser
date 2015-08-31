@@ -9,7 +9,7 @@ gulp.task("styles", () => {
   gulp.src(config.styles.src)
     .pipe(sass()
       .on("error", gutil.log))
-    .pipe(concat(config.styles.dest))
-    .pipe(gulp.dest(config.app.dest))
+    .pipe(concat(config.styles.outFile))
+    .pipe(gulp.dest(config.styles.dest))
     .pipe(connect.reload());
 });

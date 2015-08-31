@@ -20,7 +20,7 @@ function handleError(error) {
   });
   if (error.filename) {
     gutil.log(chalk.red(error.name) + " in " +
-      chalk.white(error.filename.replace(BASE_DIR + config.app.src, "")) +
+      chalk.white(error.filename.replace(BASE_DIR, "")) +
       ": " + "Line " + chalk.magenta(error.loc.line) + " & " +
       "Column " + chalk.magenta(error.loc.column) +
       " Message: " + chalk.yellow(error.message));
@@ -48,7 +48,7 @@ function bundle() {
   return bundler
     .bundle()
     .on("error", handleError)
-    .pipe(source(config.browserify.outputName))
+    .pipe(source(config.browserify.outFile))
     .pipe(buffer())
     .pipe(sourcemaps.init({
       loadMaps: true

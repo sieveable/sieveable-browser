@@ -9,16 +9,17 @@ const config = {
   },
   server: {
     port: 8888,
-    root: dest,
+    root: [dest, "./bower_components"],
     livereload: true
   },
   styles: {
-    src: "styles/**/*.{sass,scss,css}",
-    dest: "style.css"
+    src: src + "/styles/**/*.{sass,scss,css}",
+    outFile: "style.css",
+    dest: dest + "/styles"
   },
   browserify: {
     settings: {
-      entries: [src + "/app.jsx"],
+      entries: [src + "/js/app.jsx"],
       extensions: [".js", ".jsx"],
       debug: true,
       cache: {},
@@ -26,15 +27,15 @@ const config = {
       fullPaths: true
     },
     dest: dest + "/js",
-    outputName: "bundle.js",
+    outFile: "bundle.js",
     debug: gutil.env.type === "dev"
   },
   assets: {
-    src: "assets/**",
+    src: src + "/assets/**",
     dest: dest + "/assets"
   },
   html: {
-    src: "index.html",
+    src: src + "/index.html",
     dest: dest
   },
   open: {
@@ -42,15 +43,15 @@ const config = {
   },
   watch: [
     {
-      src: "sass/**/*.scss",
+      src: src + "/styles/**/*.scss",
       tasks: ["styles"]
     },
     {
-      src: "index.html",
+      src: src + "/index.html",
       tasks: ["html"]
     },
     {
-      src: "assets/**",
+      src: src + "/assets/**",
       tasks: ["assets"]
     }
   ]
