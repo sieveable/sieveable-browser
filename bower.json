@@ -1,0 +1,21 @@
+{
+  "name": "sieveable-browser",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sikuli/sieveable-browser",
+  "authors": [
+    "Khalid Alharbi <kalharbi@users.noreply.github.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "octicons": "~3.1.0"
+  }
+}
