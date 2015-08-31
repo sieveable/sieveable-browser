@@ -1,8 +1,13 @@
-# Sieveable-browser
-A web based client for Sieveable
+# Sieveable-Browser
+A web based client for Sieveable.
 
+## Requirement
+This client requires [_Sieveable_ web server]('https://github.com/sikuli/sieveable/').
 
 ## Usage
-- start _Sieveable_ server.
-- Run `npm install`
-- open the browser and go to `http://localhost:8888`
+
+`npm install` `bower install` `npm run start`
+
+## License
+
+sieveable-browser is licensed under the [MIT license]((./LICENSE))
