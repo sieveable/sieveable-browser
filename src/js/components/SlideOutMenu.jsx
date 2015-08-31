@@ -96,7 +96,7 @@ export default class SlideOutMenu extends React.Component {
           <header className="header-hamburger fixed">
             <button className="btn-hamburger js-slideout-toggle"
               onClick={this.slideoutToggle}>
-              <span className="glyphicon glyphicon-align-justify shake"
+              <span className="mega-octicon octicon-three-bars shake"
                     aria-hidden="true">
               </span>
             </button>
