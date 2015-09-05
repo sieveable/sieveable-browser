@@ -1,6 +1,9 @@
 import React from "react";
-import SlideOutMenu from "./SlideOutMenu";
+import Header from "./Header";
+import DrawerMenu from "./DrawerMenu";
+import Footer from "./Footer";
 import QueryEditor from "./QueryEditor";
+import ProgressBar from "./ProgressBar";
 import ResultList from "./ResultList";
 import sieveableStore from "../stores/sieveableStore";
 import sieveableActions from "../actions/sieveableActions";
@@ -10,8 +13,10 @@ export default class MainContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      resultCards: [],
       result: sieveableStore.getResult(),
-      executedQuery: ""
+      executedQuery: "",
+      isRunning: false
     };
     this._onChange = this._onChange.bind(this);
     this.onSelectMenu = this.onSelectMenu.bind(this);
@@ -22,14 +27,19 @@ export default class MainContainer extends React.Component {
 // add the store event listner by passing the store a callback method.
   componentDidMount() {
     sieveableStore.addChangeListener(this._onChange);
+    // Upgrades all upgradable mdl components (i.e. with 'mdl-js-*' class)
+    componentHandler.upgradeDom();
   }
-// remove the store event listner by passing the store a callback method..
+
+  // remove the store event listner by passing the store a callback method..
   componentWillUnmount() {
     sieveableStore.removeChangeListener(this._onChange);
   }
+
   handleSubmitQuery(query) {
     sieveableActions.submitQuery(query);
     this.setState({
+      isRunning: true,
       executedQuery: query
     });
   }
@@ -43,29 +53,46 @@ export default class MainContainer extends React.Component {
   }
 
   _onChange() {
+    var results = this.state.resultCards;
+    results.unshift({expandListing: this.handleExpandListing,
+      expandUI: this.handleExpandUI,
+      expandManifest:this.handleExpandManifest,
+      result: sieveableStore.getResult(),
+      executedQuery: this.state.executedQuery});
+
     this.setState({
-      result: sieveableStore.getResult()
+      isRunning: false,
+      result: sieveableStore.getResult(),
+      resultCards: results
     });
   }
 
-  handleExpandResult(id) {
-    console.log("In handleExpandResult id=" + id);
+  handleExpandListing(id) {
+    console.log("In handleExpandListing id=" + id);
+  }
+
+  handleExpandManifest(id) {
+    console.log("In handleExpandManifest id=" + id);
+  }
+
+  handleExpandUI(id) {
+    console.log("In handleExpandUI id=" + id);
   }
 
   render() {
     return (
-      <div>
-        <SlideOutMenu/>
-        <main className="panel" id="main">
+      <div id="layout" className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <Header/>
+        <DrawerMenu/>
+        <div className="mdl-layout__content mdl-color--grey-100">
           <QueryEditor submit={this.handleSubmitQuery}/>
-          <ResultList
-            expand={this.handleExpandResult}
-            getExecutedQuery={this.getExecutedQuery}
-            result={this.state.result}/>
+          {this.state.isRunning? <ProgressBar/>: <hr/>}
+          <ResultList results={this.state.resultCards}/>
           <div>
             {this.content()}
           </div>
-        </main>
+          <Footer/>
+        </div>
       </div>
     );
   }
