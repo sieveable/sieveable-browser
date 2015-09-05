@@ -67,7 +67,7 @@ export default class Result extends React.Component {
   renderExecutedQuery() {
     return (
       <div className="mdl-card__title result-card-title">
-        <p>{this.props.getExecutedQuery()}</p>
+        <p>{this.props.executedQuery}</p>
       </div>
     );
   }
