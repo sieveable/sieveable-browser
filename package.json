@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp --type dev",
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -38,6 +37,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.6",
     "node-notifier": "^4.2.3",
+    "reactify": "^1.1.1",
     "require-dir": "^0.3.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
@@ -48,9 +48,10 @@
     "brace": "^0.5.1",
     "events": "^1.0.2",
     "flux": "^2.1.1",
+    "material-ui": "^0.11.0",
     "react": "^0.13.3",
     "react-ace": "^2.1.1",
     "react-router": "^1.0.0-beta3",
-    "slideout": "^0.1.9"
+    "react-zeroclipboard": "^2.0.1"
   }
 }
