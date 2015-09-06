@@ -1,9 +1,9 @@
 # Sieveable-Browser
 
-**A web based client for Sieveable.** *Built with React*
+**A  web-based client for [Sieveable](https://github.com/sikuli/sieveable).** *Built with React*
 
 
-[![Dependency Status](https://david-dm.org/sikuli/sieveable-browser.svg)](https://david-dm.org/sikuli/sieveable-browser) [![devDependency Status](https://david-dm.org/sikuli/sieveable-browser/dev-status.svg)](https://david-dm.org/sikuli/sieveable#info=devDependencies)
+[![Dependency Status](https://david-dm.org/sikuli/sieveable-browser.svg)](https://david-dm.org/sikuli/sieveable-browser) [![devDependency Status](https://david-dm.org/sikuli/sieveable-browser/dev-status.svg)](https://david-dm.org/sikuli/sieveable-browser#info=devDependencies)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sikuli/sieveable-browser)
 
 
