@@ -4,7 +4,34 @@
     color: #fff;
     font-weight: 900;
   }
-  a.navbar-brand:hover{
+  a.navbar-brand:hover {
     color: #fff;
   }
+}
+/* Corner Ribbon
+* Credit: Eode9 http://codepen.io/eode9/pen/twkKm
+*/
+.corner-ribbon {
+  width: 200px;
+  background-color: #e43;
+  color: #fff;
+  font-size: 19px;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.sticky {
+  position: fixed;
+}
+.top-right {
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
