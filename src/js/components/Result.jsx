@@ -88,16 +88,19 @@ export default class Result extends React.Component {
                 </button>
                 <ul className="dropdown-menu">
                   <li>
+                      <a href={"https://play.google.com/store/apps/details?id=" +item.app.packageName} target="_blank"><span className="glyphicon glyphicon-eye-open"> GooglePlay</span></a>
+                  </li>
+                  <li className="disabled">
                       <a href="#"><span className="glyphicon glyphicon-eye-open"> UI</span></a>
                   </li>
-                  <li>
+                  <li className="disabled">
                       <a href="#"><span className="glyphicon glyphicon-eye-open"> Manifest</span></a>
                   </li>
-                  <li>
+                  <li className="disabled">
                     <a href="#"><span className="glyphicon glyphicon-eye-open"> Listing</span></a>
                   </li>
                   <li className="divider" role="separator"></li>
-                  <li>
+                  <li className="disabled">
                       <a href="#"><span className="glyphicon glyphicon-download-alt"> APK</span></a>
                   </li>
                 </ul>
@@ -112,7 +115,7 @@ export default class Result extends React.Component {
       <div className="text-right card-foot">
         <span>Matched Apps:
           {this.props.result.length}</span>
-        <span>Time: 20s</span>
+        <span>Time: </span>
       </div>
     );
   }
