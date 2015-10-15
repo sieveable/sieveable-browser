@@ -5,6 +5,16 @@ import "brace";
 import "brace/theme/tomorrow";
 import "brace/mode/xml";
 
+const exampleQuery = "MATCH app\nWHERE" +
+'\n\t<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>' +
+'\n\t<code class="android.telephony.SmsManager" method="sendDataMessage"/>' +
+'\n\t<downloads-count-text>500,000,000 - 1,000,000,000</downloads-count-text>' +
+'\n\t<LinearLayout>' +
+'\n\t\t<Button/>' +
+'\n\t\t<Button/>' +
+'\n\t\t</LinearLayout>' +
+'\nRETURN app';
+
 export default class QueryEditor extends React.Component {
 
   constructor(props) {
@@ -14,17 +24,18 @@ export default class QueryEditor extends React.Component {
     this.handleSaveQuery = this.handleSaveQuery.bind(this);
     this.state = {
       hasQuery: false,
-      queryText: "MATCH app\nWHERE\n\t<Button/>\nRETURN app"
+      queryText: exampleQuery
     };
   }
+
   render() {
     return (
       <div className="mdl-grid">
         <div className="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
           <AceEditor
             editorProps={{$blockScrolling: true}}
-            fontSize={20}
-            height="120px"
+            fontSize={16}
+            height="220px"
             name="query-editor"
             onChange={e => this.onChange(e)}
             theme="tomorrow"
