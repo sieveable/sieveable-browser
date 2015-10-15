@@ -32,13 +32,6 @@ export default class QueryEditorToolbar extends React.Component {
             <i className="material-icons">content_copy</i>
           </button>
         </ReactZeroClipboard>
-        <button className={"mdl-button mdl-js-button mdl-button--fab " +
-          (this.props.hasQuery ? "active" : "disabled")}
-          id="btn-save"
-          onClick={e => this.props.saveQuery(e)}
-          type="button">
-          <i className="material-icons">star</i>
-        </button>
       </div>
     );
   }
