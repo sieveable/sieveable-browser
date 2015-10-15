@@ -4,6 +4,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <div className="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div className="corner-ribbon top-right sticky">BETA</div>
         <div className="mdl-layout__header-row">
           <span className="mdl-layout-title">
             Sieveable-Browser
