@@ -5,9 +5,8 @@ export default class DrawerMenu extends React.Component {
   render() {
     return (
       <div className="android-drawer mdl-layout__drawer">
-        <span className="mdl-layout-title text-center">
-          Sieveable-Browser
-          BETA
+        <span className="mdl-layout-title">
+          <img className="sieveable-logo" src="http://sieveable.io/images/sieveable.png" alt="Sieveable"/>
         </span>
         <nav className="mdl-navigation">
           <span className="mdl-navigation__link" href="">Documentation</span>

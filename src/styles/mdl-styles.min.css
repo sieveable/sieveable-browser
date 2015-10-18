@@ -83,9 +83,14 @@ nav.mdl-navigation{
 
 .android-drawer .mdl-layout-title {
   position: relative;
-  background: #007095;
   color: #FFFFFF;
   height: 160px;
+}
+
+img.sieveable-logo  {
+  height: 140px;
+  width: 160px;
+  margin: 8px 20px;
 }
 
 .android-footer {
