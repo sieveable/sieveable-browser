@@ -12,7 +12,7 @@ const exampleQuery = "MATCH app\nWHERE" +
 '\n\t<LinearLayout>' +
 '\n\t\t<Button/>' +
 '\n\t\t<Button/>' +
-'\n\t\t</LinearLayout>' +
+'\n\t</LinearLayout>' +
 '\nRETURN app';
 
 export default class QueryEditor extends React.Component {
