@@ -40,7 +40,6 @@ export default class Result extends React.Component {
                   {this.getTableRows()}
                 </tbody>
               </table>
-              {this.renderCardOptions()}
             </div>
             {this.renderExecutionSummary()}
           </div>
@@ -115,7 +114,6 @@ export default class Result extends React.Component {
       <div className="text-right card-foot">
         <span>Matched Apps:
           {this.props.result.length}</span>
-        <span>Time: </span>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 /*** https://github.com/google/material-design-lite/blob/master/templates/android-dot-com/styles.css ***/
 
+
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -18,11 +19,8 @@
 
 @font-face {
   font-family: "And Black";
-  src: url("myfont-webfont.eot?#iefix") format('embedded-opentype'),
-       url("fonts/and_black.woff") format('woff'),
-       url("fonts/and_black.ttf") format('truetype');
+  src: url("myfont-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/and_black.woff") format('woff'), url("fonts/and_black.ttf") format('truetype');
 }
-
 body {
   margin: 0;
 }
@@ -33,71 +31,56 @@ body {
   background-color: #6ab344;
   color: #fff;
 }
-
 ::selection {
   background-color: #6ab344;
   color: #fff;
 }
-
 .android-header {
   overflow: visible;
   background-color: #007095;
 }
-
 .android-drawer {
   border-right: none;
 }
-
 .android-drawer-separator {
   height: 1px;
   background-color: #dcdcdc;
   margin: 8px 0;
 }
-
 .full-width {
-    width: 100%
+  width: 100%
 }
-
 .mdl-card {
   height: auto;
   display: flex;
   flex-direction: column;
 }
-
-.mdl-card-success{
+.mdl-card-success {
   background-color: #7ebe7e;
 }
-
 .android-drawer .mdl-navigation__link.mdl-navigation__link {
   font-size: 14px;
   color: #000;
 }
-
 .android-drawer span.mdl-navigation__link.mdl-navigation__link {
   color: #007095;
 }
-
-nav.mdl-navigation{
+nav.mdl-navigation {
   background-color: #FFFFFF;
 }
-
 .android-drawer .mdl-layout-title {
   position: relative;
   color: #FFFFFF;
   height: 160px;
 }
-
-img.sieveable-logo  {
+img.sieveable-logo {
   height: 140px;
   width: 160px;
-  margin: 8px 20px;
 }
-
 .android-footer {
   background-color: #fafafa;
   position: relative;
 }
-
 .android-footer .mdl-mega-footer--bottom-section {
   position: relative;
 }
@@ -113,12 +96,12 @@ img.sieveable-logo  {
   max-height: 250px;
   overflow-y: scroll;
 }
-.card-foot{
+.card-foot {
   color: #a0a69f;
   padding: 20px 20px;
   font-family: 'Roboto', 'Helvetica', sans-serif;
   font-size: 10pt;
 }
-.card-foot span{
+.card-foot span {
   margin: 0 20px;
 }
