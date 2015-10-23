@@ -7,7 +7,7 @@ import "brace/mode/xml";
 
 const exampleQuery = "MATCH app\nWHERE" +
 '\n\t<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>' +
-'\n\t<code class="android.telephony.SmsManager" method="sendDataMessage"/>' +
+'\n\t<code class="android.telephony.SmsManager" method="sendTextMessage"/>' +
 '\n\t<downloads-count-text>500,000,000 - 1,000,000,000</downloads-count-text>' +
 '\n\t<LinearLayout>' +
 '\n\t\t<Button/>' +
