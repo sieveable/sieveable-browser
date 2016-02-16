@@ -1,7 +1,7 @@
 import * as axios from "axios";
 import {appConstants} from "./constants";
 
-const rootUrl = "http://" + appConstants.SERVER_HOST + ":" + appConstants.SERVER_PORT + "/q/json";
+const rootUrl = "http://" + appConstants.SERVER_HOST + ":" + appConstants.SERVER_PORT + "/q";
 
 export function get(queryText) {
   var params = {
